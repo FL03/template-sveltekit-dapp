@@ -1,17 +1,27 @@
 <script>
 	import Header from '$lib/header/Header.svelte';
-	import '../app.css';
+    import '$lib/styles/app.css'
+	import '$lib/styles/tailwind.css';
 </script>
 
-<Header />
 
-<main>
-	<slot />
-</main>
+<div class="bg-white dark:bg-zinc-700 text-black dark:text-white">
+  <div class="min-h-screen">
+    <Header />
+    <main>
+        <slot />
+    </main>
+    <footer>
+        <p>
+          Homepage - <a href="https://pzzld.eth.link/">Puzzled</a>
+        </p>
+    </footer>
+  </div>
+</div>
 
-<footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>
+
+
+
 
 <style>
 	main {

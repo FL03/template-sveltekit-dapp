@@ -1,0 +1,51 @@
+<script>
+    import {page} from '$app/stores';
+
+    export let background = "bg-transparent"
+    export let brandName = "Brand"
+    export let padding = "px-2 py-3"
+    export let position = "absolute top-0 z-50"
+    export let width = "w-fully"
+    export let links = [
+      {
+        id: 0,
+        href: "/",
+        label: "Home"
+      }
+    ];
+
+    let navbarOpen = false;
+
+    function setNavbarOpen() {
+        navbarOpen !== navbarOpen
+    }
+</script>
+
+<nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg {background}">
+    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+        <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+            <a class="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
+                   href="/" sveltekit:prefetch>
+                  {brandName}
+                </a>
+            <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                    on:click="{setNavbarOpen}"
+                    type="button"
+            >
+                <i class=""></i>
+            </button>
+        </div>
+        <div class="lg:flex flex-grow items-center {navbarOpen ? 'block':'hidden'}" id="navigation-navbar">
+            <ul class="flex flex-col lg:flex-row list-none mr-auto">
+                {#each links as link}
+                    <li class:active={$page.url.pathname === link.href} class="flex items-center">
+                        <a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
+                           href="{link.href}" sveltekit:prefetch>
+                            {link.label}
+                        </a>
+                    </li>
+                {/each}
+            </ul>
+        </div>
+    </div>
+</nav>
