@@ -1,8 +1,5 @@
 {
-  "author": {
-    "name": "Joe McCain III",
-    "url": "https://pzzld.eth.link/"
-  },
+  "author": "Joe McCain III <jo3mccain@icloud.com> (https://pzzld.eth.link/)",
   "dependencies": {
     "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",
@@ -19,8 +16,13 @@
     "postcss": "^8.4.13",
     "tailwindcss": "^3.0.24"
   },
+  "engines": {
+    "node": ">=16"
+  },
+  "license": "MIT",
   "name": "@app/frontend",
-  "private": true,
+  "private": false,
+  "repository": "https://github.com/fl03/template-sveltekit.git",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
@@ -28,6 +30,6 @@
     "preview": "svelte-kit preview"
   },
   "type": "module",
-  "version": "0.0.1",
-  "url": ""
+  "version": "0.1.0",
+  "url": "https://template-sveltekit-tan.vercel.app"
 }
