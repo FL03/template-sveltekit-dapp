@@ -7,6 +7,7 @@
     "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",
     "cookie": "^0.4.1",
+    "dotenv": "^16.0.1",
     "svelte-web3": "^3.4.1"
   },
   "devDependencies": {
@@ -18,7 +19,7 @@
     "postcss": "^8.4.13",
     "tailwindcss": "^3.0.24"
   },
-  "name": "@app/client",
+  "name": "@app/frontend",
   "private": true,
   "scripts": {
     "dev": "svelte-kit dev",

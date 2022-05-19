@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/template-svk.iml" filepath="$PROJECT_DIR$/.idea/template-svk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/template-sveltekit.iml" filepath="$PROJECT_DIR$/.idea/template-sveltekit.iml" />
     </modules>
   </component>
 </project>

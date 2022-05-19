@@ -1,55 +1,34 @@
 <script>
-	import Header from '$lib/header/Header.svelte';
-    import '$lib/styles/app.css'
-	import '$lib/styles/tailwind.css';
+  import '$lib/styles/app.css';
+  import '$lib/styles/tailwind.css';
+  import { onMount } from 'svelte';
+  import { browser } from '$app/env';
+
+  import Navbar from '$lib/components/navigation/navbar/Navbar.svelte';
+  import Footer from '$lib/components/navigation/footer/Footer.svelte'
+
+  import {defaultEvmStores} from 'svelte-web3';
+
+  onMount(
+      () => {
+          if(browser) {
+              defaultEvmStores.setProvider();
+          }
+          else {
+              defaultEvmStores.setProvider("https://rpc.ankr.com/eth")
+          }
+      }
+  )
+  
 </script>
 
 
 <div class="bg-white dark:bg-zinc-700 text-black dark:text-white">
-  <div class="min-h-screen">
-    <Header />
-    <main>
+  <div class="flex flex-col">
+    <Navbar brandName="PZZLD" />
+    <main class=" min-h-screen py-12 px-10">
         <slot />
     </main>
-    <footer>
-        <p>
-          Homepage - <a href="https://pzzld.eth.link/">Puzzled</a>
-        </p>
-    </footer>
+    <Footer/>
   </div>
 </div>
-
-
-
-
-
-<style>
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
-	}
-</style>
