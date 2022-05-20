@@ -1,6 +1,6 @@
 <script>
     import {page} from '$app/stores';
-    import {connected, selectedAccount} from "svelte-web3";
+    import {connected, defaultEvmStores, selectedAccount} from "svelte-web3";
 
     export let background = "bg-transparent"
     export let brandName = "Brand"
@@ -17,6 +17,21 @@
 
     function setNavbarOpen() {
         navbarOpen !== navbarOpen
+    }
+
+    
+
+    function onClick() {
+        if($connected) {
+            return defaultEvmStores.disconnect()
+        }
+        else {
+            return defaultEvmStores.setProvider()
+        }
+    }
+
+    function login() {
+
     }
 </script>
 
@@ -47,7 +62,7 @@
             </ul>
             <ul class="flex flex-col lg:flex-row list-none mr-auto">
                     <li class="flex items-center">
-                        <button>
+                        <button class="border border-solid rounded bg-blue-300 text-black px-3 py-1 block" on:click={onClick} type="button">
                             {#if $connected}
                                 Logout
                             {:else}
