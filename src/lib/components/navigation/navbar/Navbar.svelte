@@ -54,22 +54,22 @@
                 {#each links as link}
                     <li class:active={$page.url.pathname === link.href} class="flex items-center">
                         <a class="hover:text-blueGray-500 {color} px-3 py-2 flex items-center text-xs uppercase font-bold"
-                           href="{link.href}" sveltekit:prefetch>
+                        href="{link.href}" sveltekit:prefetch>
                             {link.label}
                         </a>
                     </li>
                 {/each}
             </ul>
-            <ul class="flex flex-col lg:flex-row list-none mr-auto">
-                    <li class="flex items-center">
-                        <button class="border border-solid rounded bg-blue-300 text-black px-3 py-1 block" on:click={onClick} type="button">
-                            {#if $connected}
-                                Logout
-                            {:else}
-                                Login
-                            {/if}
-                        </button>
-                    </li>
+            <ul class="flex flex-col lg:flex-row list-none ml-auto">
+                <li class="flex items-center">
+                    <button class="border border-solid rounded bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-3 py-1 block truncate" on:click={onClick} type="button">
+                        {#if $connected}
+                            {$selectedAccount}
+                        {:else}
+                            Connect
+                        {/if}
+                    </button>
+                </li>
             </ul>
         </div>
     </div>
