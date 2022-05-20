@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <svelte:head>
     <title>App - PZZLD</title>
 </svelte:head>
