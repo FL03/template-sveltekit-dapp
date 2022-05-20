@@ -8,19 +8,9 @@
     "svelte-web3": "^3.4.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.0",
-    "@storybook/addon-actions": "^6.5.3",
-    "@storybook/addon-essentials": "^6.5.3",
-    "@storybook/addon-interactions": "^6.5.3",
-    "@storybook/addon-links": "^6.5.3",
-    "@storybook/builder-webpack4": "^6.5.3",
-    "@storybook/manager-webpack4": "^6.5.3",
-    "@storybook/svelte": "^6.5.3",
-    "@storybook/testing-library": "^0.0.11",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "autoprefixer": "^10.4.7",
-    "babel-loader": "^8.2.5",
     "postcss": "^8.4.13",
     "svelte": "^3.48.0",
     "svelte-loader": "^3.1.2",
@@ -35,12 +25,10 @@
   "private": false,
   "repository": "https://github.com/fl03/template-sveltekit.git",
   "scripts": {
-    "dev": "svelte-kit dev",
+    "dev": "svelte-kit dev -- --host",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
-    "preview": "svelte-kit preview",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "preview": "svelte-kit preview"
   },
   "type": "module",
   "version": "0.1.0",
