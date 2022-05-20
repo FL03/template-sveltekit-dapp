@@ -25,7 +25,7 @@
   "private": false,
   "repository": "https://github.com/fl03/template-sveltekit.git",
   "scripts": {
-    "dev": "svelte-kit dev -- --host",
+    "dev": "svelte-kit dev",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview"
