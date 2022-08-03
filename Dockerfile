@@ -10,9 +10,9 @@ RUN npm install &&\
 FROM builder-base as development
 
 EXPOSE 5173/tcp
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "dev", "--", "--host"]
 
 FROM builder-base as production
 
 EXPOSE 4173/tcp
-CMD ["./scripts/run.sh"]
+CMD ["npm", "run", "preview", "--", "--host"]
