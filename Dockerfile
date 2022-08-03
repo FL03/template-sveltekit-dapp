@@ -1,10 +1,18 @@
-FROM node
+FROM jo3mccain/node as builder-base
 
-ADD . /app
-WORKDIR /app
+ADD . ./project
+WORKDIR /project
 
-COPY . ./
-RUN npm install && npm run build
+COPY . .
+RUN npm install &&\
+    npm run build
 
-EXPOSE 3000
-CMD ["npm", "run", "preview"]
+FROM builder-base as development
+
+EXPOSE 5173/tcp
+CMD ["npm", "run", "dev"]
+
+FROM builder-base as production
+
+EXPOSE 4173/tcp
+CMD ["./scripts/run.sh"]

@@ -1,22 +1,26 @@
+<script context="module">
+	export const prerender = true;
+</script>
+
+<script>
+	let brand  = {
+		name: "Scattered-Systems",
+		slug: "scattered-systems",
+		tagline: "Welcome to the future of internet-based experiences",
+		type: "LLC"
+	}
+</script>
+
 <svelte:head>
-    <title>App - PZZLD</title>
+	<title>Home</title>
+	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section class="container">
-    <div class="flex flex-row">
-        <div class="container">
-            <div class="grid grid-cols-2 gap-4 place-content-center h-48 ...">
-                <div>
-                    <h2>
-                        Hello
-                    </h2>
-                </div>
-                <div>
-                    02
-                </div>
-                <div>03</div>
-                <div>04</div>
-            </div>
-        </div>
-    </div>
+<section class="flex">
+	<div class="flex-auto">
+		<div class="container mx-auto">
+			<h1 class="antialiased text-2xl">{brand.name}, {brand.type}</h1>
+			<h2 class="antialiased font-semibold italic text-lg">{brand.tagline}</h2>
+		</div>
+	</div>
 </section>
