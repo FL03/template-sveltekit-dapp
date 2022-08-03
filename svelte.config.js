@@ -9,14 +9,13 @@ const config = {
 		// Override http methods in the Todo forms
 		methodOverride: {
 			allowed: ['PATCH', 'DELETE']
-		},
-		files: {
-			assets: 'public/static',
-			hooks: 'src/hooks',
-			template: 'public/app.html'
 		}
 	},
-	preprocess: preprocess({})
+	preprocess: [
+		preprocess({
+		  postcss: true,
+		}),
+	  ],
 };
 
 export default config;

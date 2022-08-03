@@ -1,25 +1,46 @@
 <script>
-  import '$lib/styles/app.css';
-  import '$lib/styles/nucleo-icons.css';
-  import '$lib/styles/nucleo-svg.css';
-  import '$lib/styles/tailwind.css';
+  import Footer from '$lib/components/footer/Footer.svelte';
+  import Navbar from '$lib/components/nav/Navbar.svelte';
+  import '../app.css';
 
-  import Navbar from '$lib/components/navigation/navbar/Navbar.svelte';
-  import Footer from '$lib/components/navigation/footer/Footer.svelte'
-
+  let data = {
+    brand: {
+      abbr: "svelte",
+      name: "SvelteKit",
+      slug: "sveltekit",
+      tagline: "Develop beautiful, dynamic web applications with ease leveraging SvelteKit",
+      type: "LLC",
+      website: ""
+    },
+    views: [
+      {
+          id: 0,
+          key: "homepage",
+          label: "Home",
+          endpoint: "/"
+      },
+      {
+          id: 1,
+          endpoint: "/about",
+          label: "About"
+      },
+      {
+          id: 2,
+          endpoint: "/todo",
+          label: "ToDo"
+      }
+    ]
+  }
 </script>
 
-
-<div class="bg-gradient-to-r from-blue-500 to-cyan-600 text-black">
-  <div class="flex flex-col">
-    <Navbar>
-      <span slot="brand">
-        <p>Pzzld</p>
-      </span>
-    </Navbar>
-    <main class="min-h-screen py-12 px-10">
-        <slot />
-    </main>
-    <Footer/>
+<div class="flex">
+  <div class="flex-auto min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500">
+    <div class="container mx-auto">
+        <Navbar brand={data.brand} views={data.views} />
+        <main class="flex-auto mt-3 py-3 rounded">
+            <slot />
+        </main>
+        <Footer brand={data.brand}/>
+    </div>
   </div>
 </div>
