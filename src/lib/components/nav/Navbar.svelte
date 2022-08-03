@@ -21,8 +21,8 @@
       },
       {
         id: 2,
-        endpoint: "/todo",
-        label: "ToDo"
+        endpoint: "/todos",
+        label: "Todo"
       }
     ];
     export let controls = {
