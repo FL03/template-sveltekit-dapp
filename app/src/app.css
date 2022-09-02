@@ -9,3 +9,9 @@
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
 }
+
+body {
+	background-color: inherit;
+	margin: 0;
+	padding: 0;
+}
