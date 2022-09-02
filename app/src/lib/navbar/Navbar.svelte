@@ -1,6 +1,6 @@
 <script>
     import { page } from '$app/stores';
-	  import logo from './svelte-logo.svg';
+	  import logo from '../svelte-logo.svg';
     export let brand = {
       name: "",
       slug: "",
@@ -10,17 +10,14 @@
     }
     export let views = [
       {
-        id: 0,
         endpoint: "/",
         label: "Home"
       },
       {
-        id: 1,
         endpoint: "/about",
         label: "About"
       },
       {
-        id: 2,
         endpoint: "/todos",
         label: "Todo"
       }
@@ -38,8 +35,8 @@
     }
 </script>
 
-<nav class="flex items-center">
-  <div class="container mx-auto dark:bg-gray-800 dark:text-white bg-transparent p-3 mt-3 rounded-lg">
+<nav class="absolute flex items-center inset-x-0 top-0 z-40">
+  <div class="container mx-auto dark:bg-transparent dark:text-white bg-transparent p-3 mt-3 rounded-lg">
     <div class="flex flex-wrap items-center">
       <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
         <a href="{brand.website}" class="flex items-center">
