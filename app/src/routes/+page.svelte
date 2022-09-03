@@ -3,8 +3,8 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Template</title>
+	<meta name="description" content="A complete template for creating elegant decentralized applications" />
 </svelte:head>
 
 <span class="flex-1">
@@ -31,5 +31,4 @@
 		font-size: x-large;
 		font-style: italic;
 	}
-	
 </style>
