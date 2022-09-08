@@ -10,7 +10,7 @@
 		"svelte-web3": "latest"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-cloudflare": "next",
+		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"@types/cookie": "^0.5.1",
 		"autoprefixer": "^10.4.8",
@@ -24,7 +24,7 @@
 	},
 	"homepage": "https://github.com/FL03/template-sveltekit",
 	"license": "MIT",
-	"name": "@svkcl/template",
+	"name": "template-sveltekit-dapp",
 	"repository": "https://github.com/FL03/template-sveltekit",
 	"readme": "README.md",
 	"scripts": {
