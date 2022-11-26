@@ -1,26 +1,25 @@
 {
-	"author": "FL03 <jo3mccain@icloud.com> (https://gitlab.com/FL03)",
-	"bugs": "https://gitlab.com/FL03/template-sveltekit-dapp/-/issues",
-	"description": "A simple dapp template built leveraging SvelteKit",
-	"homepage": "https://gitlab.com/FL03/template-sveltekit-dapp",
-	"keywords": [],
-	"license": "MIT",
-	"name": "@pzzld/templates",
-	"private": false,
-	"readme": "https://gitlab.com/FL03/template-sveltekit-dapp/#README",
-	"repository": "https://gitlab.com/FL03/template-sveltekit-dapp",
-	"scripts": {
-		"build": "npm run svk:build --workspace=@templates/svk",
-		"dev": "npm run svk:dev --workspace=@templates/svk",
-		"start": "npm run svk:preview --workspace=@templates/svk",
-		"svk:build": "npm run build --workspace=@templates/svk",
-		"svk:dev": "npm run dev --workspace=@templates/svk",
-		"svk:install": "npm install --workspace=@templates/svk",
-		"svk:preview": "npm run preview --workspace=@templates/svk"
-
-	},
-	"version": "0.0.1",
-	"workspaces": [
-		"template"
-	]
+  "author": "FL03 <jo3mccain@icloud.com> (https://github.com/FL03)",
+  "bugs": "https://github.com/FL03/template-sveltekit-dapp/issues",
+  "description": "@pzzld/templates",
+  "keywords": [],
+  "homepage": "",
+	"license": "Apache-2.0",
+  "name": "@pzzld/app",
+  "private": true,
+  "scripts": {
+    "build": "bash ./scripts/build.sh",
+    "dev": "npm run client:dev",
+    "client:build": "npm run build --workspace=@app/frontend",
+    "client:dev": "npm run dev --workspace=@app/frontend",
+    "client:install": "npm install --workspace=@app/frontend",
+    "client:package": "npm run package --workspace=@app/frontend",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "readme": "https://github.com/FL03/template-sveltekit-dapp/#README",
+  "repository": "https://github.com/FL03/template-sveltekit-dapp",
+  "version": "0.0.0",
+  "workspaces": [
+    "frontend"
+  ]
 }
